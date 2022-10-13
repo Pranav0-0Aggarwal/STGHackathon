@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <style>
+            
+#Form{
+    width:20%;
+    text-align:center;
+    margin:auto;
+    margin-top: 250px;
+    height:350px;
+    background: none;
+}
+input{
+    margin:20px;
+    border:0px;
+    border-bottom:1px solid;
+    border-width: 2px;
+    height:30px;
+    background: none;
+    width:350px;
+    font-style: cursive;
+    font-size: 18px;
+    font-weight: normal;
+}
+.lbl{
+    color:white;
+    font-weight: 600;
+    position: absolute;
+    font-size: 20px;
+    font-style: cursive;
+    margin-left: 20px;
+}
+input:focus{
+    outline:none;
+    border-color: #15d532;
+}
+
+#form_container{
+    z-index: 11;
+}
+
+#Login_container{
+    z-index: 11;
+}
+button{
+    height:50px;
+    margin:10px;
+    font-family: cursive;
+    font-weight: bold;
+    background:none;
+    height:40px;
+    font-size:20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 1;
+    box-shadow: none;
+
+}
+button:hover{
+    background-color:black;
+    color: white;
+}
+#conf_pass{
+    display: none;
+}
+#form_header{
+    font-family: Algerian;
+    font-size:40px;
+    text-decoration: underline;
+}
+#reg{
+    margin-left:60px;
+}
+
+
+
+*{
+    margin: 0;
+      padding:0;  
+      box-sizing: border-box;
+      font-family: 'Poppins',sans-serif;
+      color:white;
+
+  }
+  
+
+  body{
+    background-color: #1c0522;
+  }
+  
+  .header{
+      min-height: 100vh;
+      background:linear-gradient(#2b1055,#1c0522);
+  }
+  
+
+  .section{
+      /* position: relative; */
+      width: 100%;
+      height: 100vh;
+      padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0)); */
+  
+  }
+  
+  .section > img{
+      position: absolute; 
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+  }
+  
+  section::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 10px;
+  
+  }
+  
+  /* #stars{
+  mix-blend-mode: screen;
+  } */
+  
+  #Moon{
+      mix-blend-mode: screen;
+      margin-bottom: 100px;
+  
+  }
+  #Mountains_front{
+  z-index: 10;
+  }
+  
+  
+  #text1{
+      position: absolute;
+      color: white;
+      white-space: nowrap;
+      z-index: 9;
+      font-weight: 800;
+      margin-bottom: 300px;
+      /* margin-top: ; */
+  }
+  
+  /* .btn{
+      display: inline-block;
+      text-decoration: none;
+      padding:8px 30px ;
+      border-radius:20px;
+      background: #fff;
+      color:#2b1055;
+      font-size: 18px;
+      z-index: 9;
+       transform: translateY(70px); 
+    margin-top: 150px;
+  } */
+  
+  
+  .sec{
+      position: relative;
+      padding: 10px;
+      align-items: center;
+      background: #1c0522;
+      margin-left: 40%;
+      margin-right: 40%;
+      text-align: center;
+      border-radius: 10px;
+  }
+  
+  .sec > h2 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+   color: #fff;
+  }
+
+  .ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.list{
+     list-style: none;
+     margin-top: 40px;
+    margin-left: 20px; 
+    font-size: 20px;
+}
+
+.link{
+text-decoration: none;
+padding: 6px 15px;
+color: #fff;
+border-radius: 20px;
+}
+
+.link:hover,.active{
+    background:#fff;
+    color: #2b1055;
+}
+
+
+
+.right-shift{
+    margin-left: 15px;
+}
+        </style>
+    </head>
+    <body>
+        <div class='header' >
+            <ul class='ul'>
+            <li class='list'>
+              <a href="/index1" class='index link '>Home</a>
+            </li>
+        
+          
+        
+            <li class='list'>
+              <a href="/login" class='index link active'>Login</a>
+            </li>
+            <li class='list'>
+              <a href="/contact" class='index link'>Our Team</a>
+            </li>
+           
+            </ul>
+                  <div class='section' >
+                      <img  src="{{url_for('static',filename='images/stars.png')}}" id="stars" />
+               
+                <img src="{{url_for('static',filename='images/Moon.png')}}" id="Moon" />
+                <img src="{{url_for('static',filename='images/Mountains_behind.png')}}" id="Mountains_behind" />
+                
+                <h2 id="text1">Login /SignUp</h2>
+                <div id="Login_container">
+                    <div id="form_container">
+                        <label class="lbl" id="name">Name</label>
+                        <input type="text" id="user_name">
+                        <br>
+                        <label class="lbl" id="mail">Email</label>
+                        <input type="email" id="email">
+                        <br>
+                        <label class="lbl" id="pass">Password</label>
+                        <input type="password" id="password">
+                        <div id="button_container">
+                            <button onclick="login()" class="right-shift">Login</button>
+                            <button onclick="register()" id="reg">Register</button>
+                        </div>
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/Mountains_front.png')}}" id="Mountains_front" />
+        
+            </div>
+        
+                  <!-- <Input /> -->
+           
+            </div>
+           </div>
+        <!-- <div id="content_container">
+            <div id="Form">
+                
+                <div id="Header">
+                    <h2 id="form_header">Login / SignUp</h2>
+                </div>
+                <div id="Login_container">
+                    <div id="form_container">
+                        <label class="lbl" id="name">Name</label>
+                        <input type="text" id="user_name">
+                        <br>
+                        <label class="lbl" id="mail">Email</label>
+                        <input type="email" id="email">
+                        <br>
+                        <label class="lbl" id="pass">Password</label>
+                        <input type="password" id="password">
+                        <div id="button_container">
+                            <button onclick="login()">Login</button>
+                            <button onclick="register()" id="reg">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </body>
+    <script>
+        let stars = document.getElementById("stars");
+        //let moon = document.getElementById("Moon");
+        //let Mountains_behind = document.getElementById("Mountains_behind");
+        //let text1 = document.getElementById("text1");
+        //let Mountains_front = document.getElementById("Mountains_front");
+        //let btn = document.getElementById("btn");
+         
+        window.addEventListener("scroll",function()
+        {
+
+          //if(moon.style.top > "4000px")
+          //{
+          //  return false;
+          //} 
+          let value = window.scrollY;
+          stars.style.left = value * 1 + 'px';
+          //moon.style.top = value * 1.25 + 'px';
+          //Mountains_behind.style.top = value * 0.5 + 'px';
+          //Mountains_front.style.top = value * 0 + 'px';
+          //text1.style.marginRight = value * 2.5 + 'px';
+          //text1.style.marginTop = value * 1.5 + 'px';
+
+        })
+      </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDdRXTl50wBB2fsZWGRd2oU8mLfgcs3fGE",
+            authDomain: "horcrux-d2131.firebaseapp.com",
+            databaseURL: "https://horcrux-d2131-default-rtdb.firebaseio.com",
+            projectId: "horcrux-d2131",
+            storageBucket: "horcrux-d2131.appspot.com",
+            messagingSenderId: "842859551267",
+            appId: "1:842859551267:web:ffcbcab993e52d788eef96",
+            measurementId: "G-HCSBJ0H4VE"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth()
+        const database = firebase.database()
+        
+        function register () {
+          var email = document.getElementById('email').value
+          var password = document.getElementById('password').value
+          var user_name = document.getElementById('user_name').value
+        
+          if (validate_email(email) == false || validate_password(password) == false) {
+            alert('Email or Password is Invalid!!')
+            return
+          }
+         
+          auth.createUserWithEmailAndPassword(email, password)
+          .then(function() {
+            var user = auth.currentUser
+            var database_ref = database.ref()
+            var user_data = {
+              email : email,
+              user_name : user_name,
+              last_login : Date.now()
+            }
+            database_ref.child('users/' + user.uid).set(user_data)
+            alert('User Created!!')
+          })
+          .catch(function(error) {
+            var error_code = error.code
+            var error_message = error.message
+            alert(error_message)
+          })
+          document.getElementById('email').value=''
+          document.getElementById('password').value=''
+          document.getElementById('user_name').value=''
+        }
+        
+        function login () {
+          email = document.getElementById('email').value
+          password = document.getElementById('password').value
+        
+          if (validate_email(email) == false || validate_password(password) == false) {
+            alert('Email or Password is Invalid!!')
+            return
+          }
+          auth.signInWithEmailAndPassword(email, password)
+          .then(function() {
+            var user = auth.currentUser
+            var database_ref = database.ref()
+            var user_data = {
+              last_login : Date.now()
+            }
+            database_ref.child('users/' + user.uid).update(user_data)
+            alert('You are Logged In!!')
+          })
+          .catch(function(error) {
+            var error_code = error.code
+            var error_message = error.message
+            alert(error_message)
+          })
+          document.getElementById('email').value=''
+          document.getElementById('password').value=''
+          document.getElementById('user_name').value=''
+        }
+        
+        function validate_email(email) {
+          expression = /^[^@]+@\w+(\.\w+)+\w$/
+          if (expression.test(email) == true) {
+            return true
+          } else {
+            return false
+          }
+        }
+        
+        function validate_password(password) {
+          if (password < 6) {
+            return false
+          } else {
+            return true
+          }
+        }
+        
+        function validate_field(field) {
+          if (field == null) {
+            return false
+          }
+        
+          if (field.length <= 0) {
+            return false
+          } else {
+            return true
+          }
+        }
+    </script>
+</html>

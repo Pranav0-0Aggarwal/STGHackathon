@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="Login.css">
+    </head>
+    <body>
+        <div class='header' >
+            <ul class='ul'>
+            <li class='list'>
+              <a href="index.html" class='index link '>Home</a>
+            </li>
+        
+              <li class='list'><a href="#" class='index link' >about</a>
+              </li>
+        
+            <li class='list'>
+              <a href="Login.html" class='index link active'>Login</a>
+            </li>
+            <li class='list'>
+              <a href="contact.html" class='index link'>Contact</a>
+            </li>
+           
+            </ul>
+                  <div class='section' >
+                      <img  src="images/stars.png" id="stars" />
+               
+                <img src="images/moon.png" id="Moon" />
+                <img src="images/mountains_behind.png" id="Mountains_behind" />
+                
+                <h2 id="text1">Login /SignUp</h2>
+                <div id="Login_container">
+                    <div id="form_container">
+                        <label class="lbl" id="name">Name</label>
+                        <input type="text" id="user_name">
+                        <br>
+                        <label class="lbl" id="mail">Email</label>
+                        <input type="email" id="email">
+                        <br>
+                        <label class="lbl" id="pass">Password</label>
+                        <input type="password" id="password">
+                        <div id="button_container">
+                            <button onclick="login()" class="right-shift">Login</button>
+                            <button onclick="register()" id="reg">Register</button>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/mountains_front.png" id="Mountains_front" />
+        
+            </div>
+        
+                  <!-- <Input /> -->
+           
+            </div>
+           </div>
+        <!-- <div id="content_container">
+            <div id="Form">
+                
+                <div id="Header">
+                    <h2 id="form_header">Login / SignUp</h2>
+                </div>
+                <div id="Login_container">
+                    <div id="form_container">
+                        <label class="lbl" id="name">Name</label>
+                        <input type="text" id="user_name">
+                        <br>
+                        <label class="lbl" id="mail">Email</label>
+                        <input type="email" id="email">
+                        <br>
+                        <label class="lbl" id="pass">Password</label>
+                        <input type="password" id="password">
+                        <div id="button_container">
+                            <button onclick="login()">Login</button>
+                            <button onclick="register()" id="reg">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </body>
+    <script>
+        let stars = document.getElementById("stars");
+        //let moon = document.getElementById("Moon");
+        //let Mountains_behind = document.getElementById("Mountains_behind");
+        //let text1 = document.getElementById("text1");
+        //let Mountains_front = document.getElementById("Mountains_front");
+        //let btn = document.getElementById("btn");
+         
+        window.addEventListener("scroll",function()
+        {
+
+          //if(moon.style.top > "4000px")
+          //{
+          //  return false;
+          //} 
+          let value = window.scrollY;
+          stars.style.left = value * 1 + 'px';
+          //moon.style.top = value * 1.25 + 'px';
+          //Mountains_behind.style.top = value * 0.5 + 'px';
+          //Mountains_front.style.top = value * 0 + 'px';
+          //text1.style.marginRight = value * 2.5 + 'px';
+          //text1.style.marginTop = value * 1.5 + 'px';
+
+        })
+      </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="Login.js"></script>
+</html>

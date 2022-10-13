@@ -1,0 +1,130 @@
+
+
+h1{
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    margin-top: 50px;
+}
+
+.header{
+    min-height: 100vh;
+}
+
+
+.main-heading{
+
+    padding-left: 8%;
+    padding-top: 50px;
+}
+
+#Stars{
+    mix-blend-mode: screen;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.neon {
+    mix-blend-mode: screen;
+    margin-top:0px ;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #18D26e;
+    font-family: Cursive;
+    font-size: 50px;
+    z-index: 3;
+}
+.Main{
+    margin-top: 50px;
+}
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 10px #18D26e,
+          0 0 40px #18D26e,
+          0 0 100px #18D26e;
+      }
+      to {
+        text-shadow:
+          0 0 5px #18D26e,
+          0 0 20px #18D26e,
+          0 0 60px #18D26e;
+      }
+}
+
+span{
+    color: black;
+}
+
+div{
+    color: black;
+}
+
+
+
+.member{
+    line-height: 2px;
+    margin-left: 50px;
+    border: 2px solid white;
+    /* width: 500px; */
+    padding: 5px;
+}
+
+
+.main-body{
+    padding-top: 2%;    
+}
+
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin-left: 15%;
+    margin-top: -1000px;
+    
+}
+
+
+
+.flex-item > img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: rgb(119, 0, 255) 2px solid;
+}
+
+.flex-item{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    border: solid rgb(87, 23, 226) 1px;
+    /* flex-grow: 3; */
+    display: inline-block;
+    /* box-shadow: 3px 3px 3px 0px rgba(204, 156, 85, 0.623) ; */
+    border:1px solid magenta;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+.p{
+    margin-top: 5%;
+    margin-bottom: 15px;
+    font-size: 25px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-align: center;
+}

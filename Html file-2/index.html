@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class='header' >
+    <ul class='ul'>
+    <li class='list'>
+      <a href="#" class='index link active'>Home</a>
+    </li>
+
+      <li class='list'><a href="#" class='index link' >about</a>
+      </li>
+
+    <li class='list'>
+      <a href="Login.html" class='index link'>Login</a>
+    </li>
+    <li class='list'>
+      <a href="contact.html" class='index link'>Contact</a>
+    </li>
+   
+    </ul>
+          <div class='section' >
+              <img  src="images/stars.png" id="stars" />
+       
+        <img src="images/moon.png" id="Moon" />
+        <img src="images/mountains_behind.png" id="Mountains_behind" />
+        
+        <h2 id="text1">Horcrux</h2>
+        <a href='#sec'  class='btn'>Get Started </a>
+        <img src="images/mountains_front.png" id="Mountains_front" />
+
+    </div>
+    <div class='sec' id='sec'>
+        <h2>Input Text</h2>
+          </div>
+          <!-- <Input /> -->
+   
+    </div>
+   </div>
+
+      <div class="inputContainer">
+        <form action="" >
+          <div class='userInput'>
+            
+            <input class='inputField' type="text" placeholder='Add Items'/>
+           </div>
+          <div class='buttons'>
+            <div class=''>
+              <button class='add button1'>  Add Items
+                <!-- <AddCircleOutlineIcon class='icon' /></button> -->
+            </div>
+            <div class=''>
+              <button class='submit button1'>Submit
+              </button> 
+   
+            </div>
+          </div>
+        </form>    
+        
+      </div>
+
+      <script>
+        let stars = document.getElementById("stars");
+        //let moon = document.getElementById("Moon");
+        //let Mountains_behind = document.getElementById("Mountains_behind");
+        //let text1 = document.getElementById("text1");
+        //let Mountains_front = document.getElementById("Mountains_front");
+        //let btn = document.getElementById("btn");
+         
+        window.addEventListener("scroll",function()
+        {
+
+          //if(moon.style.top > "4000px")
+          //{
+          //  return false;
+          //} 
+          let value = window.scrollY;
+          stars.style.left = value * 1 + 'px';
+          //moon.style.top = value * 1.25 + 'px';
+          //Mountains_behind.style.top = value * 0.5 + 'px';
+          //Mountains_front.style.top = value * 0 + 'px';
+          //text1.style.marginRight = value * 2.5 + 'px';
+          //text1.style.marginTop = value * 1.5 + 'px';
+
+        })
+      </script>
+      
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset- "UTF-8">
+    <title>pass</title>
+    <style>
+body{
+    background-color: #1c0522;
+
+}
+.pass{
+    background-color: white;
+    
+    border-radius:10px;
+    color:black;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:0px;
+    padding:10px;
+    
+
+}
+h1{
+    color:white;
+    justify-items:center;
+
+    margin-left: 45%;
+    margin-top: 15%;
+}
+
+#star{
+    margin-top: -50%;
+    position:sticky;
+}
+
+#logo{
+    height:150px;
+    width:auto;
+    position:sticky;
+    margin-top:50px;
+    margin-left:100px;
+    opacity:0.5;
+}
+
+ </style>
+</head>
+
+<body>
+
+    <img src="{{url_for('static',filename='images/horcrux.png')}}" id="logo"/>
+    <h1>OUTPUT</h1>
+    <h1 class="pass">{{ans}}</h1>
+    
+    <img  src="{{url_for('static',filename='images/stars.png')}}" id="star" />
+    <script>
+        let stars = document.getElementById("star");
+        //let moon = document.getElementById("Moon");
+        //let Mountains_behind = document.getElementById("Mountains_behind");
+        //let text1 = document.getElementById("text1");
+        //let Mountains_front = document.getElementById("Mountains_front");
+        //let btn = document.getElementById("btn");
+         
+        window.addEventListener("scroll",function()
+        {
+
+          //if(moon.style.top > "4000px")
+          //{
+          //  return false;
+          //} 
+          let value = window.scrollY;
+          stars.style.left = value * 1.5 + 'px';
+          //moon.style.top = value * 1.25 + 'px';
+          //Mountains_behind.style.top = value * 0.5 + 'px';
+          //Mountains_front.style.top = value * 0 + 'px';
+          //text1.style.marginRight = value * 2.5 + 'px';
+          //text1.style.marginTop = value * 1.5 + 'px';
+
+        })
+      </script>
+</body>
+
+</html>

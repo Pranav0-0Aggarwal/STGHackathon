@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+      <style>
+
+
+
+
+h1{
+    align-items: center;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 50px;
+}
+
+.header{
+    min-height: 100vh;
+}
+
+body{
+        
+      background:linear-gradient(#2b1055,#1c0522);
+}
+
+
+.main-heading{
+
+    padding-left: 8%;
+    padding-top: 50px;
+}
+
+#Stars{
+    mix-blend-mode: screen;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+.Main{
+    margin-top: 50px;
+}
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 10px #18D26e,
+          0 0 40px #18D26e,
+          0 0 100px #18D26e;
+      }
+      to {
+        text-shadow:
+          0 0 5px #18D26e,
+          0 0 20px #18D26e,
+          0 0 60px #18D26e;
+      }
+}
+
+span{
+    color: black;
+}
+
+div{
+    color: black;
+}
+
+
+
+.member{
+    line-height: 2px;
+    margin-left: 50px;
+    border: 2px solid white;
+    /* width: 500px; */
+    padding: 5px;
+}
+
+
+.main-body{
+    padding-top: 2%;    
+}
+
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin-left: 15%;
+    margin-top: -85%;
+    
+}
+
+
+
+.flex-item > img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: rgb(119, 0, 255) 2px solid;
+}
+
+.flex-item{
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    border: solid rgb(87, 23, 226) 1px;
+    /* flex-grow: 3; */
+    display: inline-block;
+    /* box-shadow: 3px 3px 3px 0px rgba(204, 156, 85, 0.623) ; */
+    border:1px solid magenta;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.ul{
+    margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+  }
+  
+  .list{
+       list-style: none;
+       margin-top: 40px;
+      margin-left: 20px; 
+      font-size: 20px;
+  }
+  
+  .link{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+  }
+  
+  .link:hover,
+  .active{
+      background:#fff;
+      color: #2b1055;
+  }
+
+.p{
+    margin-top: 5%;
+    margin-bottom: 15px;
+    font-size: 25px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-align: center;
+} 
+</style>
+    </head>
+    <body>
+        <div class='header' >
+            <ul class='ul'>
+            <li class='list'>
+              <a href="/index1"   class='index link '>Home</a>
+            </li>
+            <li class='list'>
+              <a href='/login' class='index link'>Login</a>
+            </li>
+            <li class='list'>
+              <a href="#" class='index link active'>Our Team</a>
+            </li>
+           
+            </ul>
+                  <div class='section' >   
+                <div class='ourteam'>
+                    <h1>Our Team</h1>
+                </div>
+                <div class="flex-container" >
+                    <img src="{{url_for('static',filename='images/stars.png')}}" id="Stars"/>
+
+              <div class="flex-item">
+                  <img src="{{url_for('static',filename='Contact images/pranav.jpeg')}}"  />
+                  <p class='p'>Pranav Aggarwal</p>
+                  <p class='p'>penguin.pranav@gmail.com</p>
+              </div>
+
+              <div class="flex-item">
+                <img src=" {{url_for('static',filename='Contact images/mukul.jpeg')}}" alt="" id="flex-item" />
+                <p class='p'>Mukul Goyal</p>
+                <p class='p'>
+                    goyal.mukul7689@gmail.com
+                </p>
+              </div>
+              
+             <div class="flex-item">
+                <img src="{{url_for('static',filename='Contact images/Camera4.jpeg')}}"  />
+                <p class='p'>Vasuman</p>
+                <p class='p'>vasumaangarg@gmail.com</p>
+             </div>
+            
+             <div class="flex-item">
+                <img src=" {{url_for('static',filename='Contact images/dolo.jpeg')}}" id="flex-item" />
+                <p class='p'>Nitin</p>
+                <p class='p'>
+                    nitinmittal778@gmail.com
+                </p>
+             </div>
+            
+              <div class="flex-item">
+                <img src="{{url_for('static',filename='Contact images/vanshul.jpeg')}}"  />
+                <p class='p'>Vanshul Goyal</p>
+                <p class='p'>vanshulg101@gmail.com</p>
+              </div>
+              <div class="flex-item">
+                  <img src="{{url_for('static',filename='Contact images/keith.jpeg')}}" />
+                  <p class='p'>Keith Swamy</p>
+                  <p class='p'>keithswamy7777@gmail.com</p>
+              </div>
+              
+          
+         
+              
+        </div>
+
+      </div>
+  
+    </body>
+</html>
